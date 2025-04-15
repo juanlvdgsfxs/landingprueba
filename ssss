@@ -1,10 +1,273 @@
-xsdfsdfsdf}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <title>Mega Candy - Bono del 200%</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: radial-gradient(circle, #1a0033, #0d001a);
+      color: white;
+      text-align: center;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden; /* Evita el deslizamiento */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      padding: 0;
+      width: 100%;
+    }
+    .logo {
+      width: 150px; /* Tamaño reducido */
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px #FFD700); /* Mantiene el efecto de sombra */
+      animation: moveBlur 3s infinite alternate; /* Efecto de movimiento en el difuminado */
+    }
+    .bonus-image {
+      width: 220px; /* Tamaño aumentado aún más */
+      margin: 10px 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #FFD700;
+      text-shadow: 0 0 20px #FFD700, 0 0 30px #FF4500;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #fff;
+    }
+    .highlight {
+      color: white; /* Mantiene el color blanco */
+      text-shadow: none; /* Sin brillo */
+      font-weight: bold;
+    }
+    .cta-message {
+      font-size: 1.3rem;
+      margin: 20px 0;
+      color: #FFD700;
+      text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500;
+      animation: glowText 1.5s infinite alternate; /* Efecto brillante */
+    }
+    .whatsapp-button {
+      margin-top: 20px;
+      background: #25D366; /* Color exacto del botón */
+      color: white;
+      font-size: 1.5rem;
+      padding: 15px 50px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none; /* Elimina subrayado */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px; /* Espaciado entre el logo y el texto */
+      box-shadow: 0 0 15px #25D366, 0 0 30px #25D366;
+      animation: bounce 1s infinite, glowPulse 1.5s infinite alternate; /* Rebote rápido y glow pulsante */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #25D366, 0 0 40px #25D366;
+    }
+    .whatsapp-button img {
+      width: 40px; /* Tamaño del logo */
+      height: 40px;
+    }
+    .limited-time {
+      margin-top: 20px;
+      color: #FF6347;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-shadow: 0 0 10px #FF6347, 0 0 20px #FF4500;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #aaa;
+      text-shadow: 0 0 5px #555;
+    }
+    @keyframes moveSides {
+      0% {
+        transform: translateX(-5px);
+      }
+      100% {
+        transform: translateX(5px);
+      }
+    }
+    @keyframes pulseGlow {
+      0% {
+        filter: drop-shadow(0 0 10px #FFD700);
+      }
+      100% {
+        filter: drop-shadow(0 0 20px #FFD700);
+      }
+    }
+    @keyframes glowText {
+      0% {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      }
+      100% {
+        text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 10px #2ecc71, 0 0 20px #27ae60;
+      }
+      100% {
+        box-shadow: 0 0 20px #2ecc71, 0 0 30px #27ae60;
+      }
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px #fff;
+      }
+      50% {
+        box-shadow: 0 0 20px #ffcc00;
+      }
+      100% {
+        box-shadow: 0 0 10px #fff;
+      }
+    }
+    .bonus-label {
+      font-size: 14px;
+      color: #ffcc00;
+      text-shadow: 0 0 5px #ffcc00;
+      margin-bottom: 5px;
+      display: block;
+    }
+    @keyframes moveBlur {
+      0% {
+        filter: drop-shadow(0 0 10px #FFD700);
+      }
+      50% {
+        filter: drop-shadow(0 0 20px #FFD700);
+      }
+      100% {
+        filter: drop-shadow(0 0 10px #FFD700);
+      }
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 15px #25D366, 0 0 30px #25D366;
+      }
+      100% {
+        box-shadow: 0 0 25px #25D366, 0 0 40px #25D366;
+      }
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .whatsapp-button {
+        font-size: 1.8rem;
+        padding: 20px 60px; /* Ajustado para móviles */
+      }
+    }
+    a {
+      text-decoration: none; /* Elimina subrayado de enlaces */
+    }
+    .boton-wpp {
+      width: 280px; /* Tamaño ligeramente aumentado */
+      height: auto;
+      animation: bounce 1s infinite; /* Movimiento de rebote más rápido */
+    }
 
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    h1, .highlight, .cta-message, .bonus-label {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para los textos */
+    }
+    @keyframes glowText {
+      0% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500;
+      }
+      100% {
+        text-shadow: 0 0 20px #FFD700, 0 0 30px #FF4500;
+      }
+    }
+  </style><!-- Meta Pixel Code -->
 
-asf
-f
-f
-f
-
-f
-ff
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '969436602060306');
+  fbq('track', 'PageView');
+  </script><noscript><img height="1" width="1" style="display:none"
+  src=
+  "https://www.facebook.com/tr?id=969436602060306&amp;ev=PageView&amp;noscript=1"></noscript><!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="container">
+    <img src="images/casino-logo.png" alt="ArgenPlay Logo" class=
+    "logo">
+    <div style="text-align: center;"><span class=
+    "bonus-label">¡Solo por hoy!</span> <img src=
+    "images/logodel200.png" alt="Bono del 200%" class=
+    "bonus-image"></div>
+    <p class="highlight">🔥 TRIPLICA TU CARGA</p>
+    <p class="cta-message">Escribinos ahora<br>
+    apretando en el botón de abajo</p><a href=
+    "https://wa.me/1151366515?text=Hola,%20quiero%20mi%20200%%20en%20la%20primer%20carga!"
+    target="_blank" onclick=
+    "fbq('track', 'Lead', { eventID: '10058037880892614' })"><img src="images/boton-wpp.png"
+    alt="Botón de WhatsApp" class="boton-wpp"></a>
+    <div style=
+    "margin-top: 10px; font-size: 0.9rem; color: #aaa; text-shadow: 0 0 5px #555;">
+      <img src="images/whatsapp-verified.png" alt=
+      "Verificado por WhatsApp" style=
+      "width: 20px; vertical-align: middle; margin-right: 5px;">
+      Verificado por WhatsApp
+    </div>
+  </div>
+</body>
+</html>
